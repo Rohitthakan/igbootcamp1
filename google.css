@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 15px 15px;
+}
+
+nav img {
+    width: 6%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.main {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.google {
+    position: relative;
+    width: 380px;
+    top: 80px;
+}
+
+.searchb {
+    margin-top: 80px;
+    width: 140%;
+    height: 45px;
+    position: absolute;
+    transform: translate(-20%, 50%);
+}
+
+input[type="text"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 50px;
+    border: 1px solid #d5d4d4;
+    outline: none;
+    padding: 0 40px 0 45px;
+    font-size: 16px;
+    font-family: noto sans hk;
+    box-shadow: 0 2px 10px -7px #000;
+}
+
+.searchicon {
+    top: 13px;
+    left: 18px;
+    color: #777;
+    font-size: 21px;
+    z-index: 1;
+    position: absolute;
+}
+
+.mic {
+    position: absolute;
+    width: 13px;
+    right: -65px;
+    top: 13px;
+}
+
+.mic:hover {
+    cursor: pointer;
+}
+
+#Recent {
+    color: rgb(47, 45, 45);
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+    position: relative;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.Recent1 i {
+    margin: 0px 13px;
+    margin-top: 20px;
+}
+
+.Recent2 i {
+    margin: 0px 14px;
+    margin-top: 20px;
+}
+
+.iconnames a {
+    color: rgb(107, 90, 90);
+    text-decoration: none;
+    margin: 0px 14px;
+    font-size: 12px;
+}
+
+.iconnames a:hover {
+    color: rgb(47, 45, 45);
+}
+
+input[type="button"] {
+    background: #ebe8e8;
+    border: none;
+    padding: 8px 20px;
+    margin: 10px;
+    color: #4e4d4d;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="button"]:hover {
+    box-shadow: 0 0 2px #000;
+    color: #000;
+    background: #ede8e8;
+}
+
+nav {
+    float: right;
+    font-family: arial;
+    font-size: 13px;
+}
+
+.avatar {
+    width: 35px;
+    border-radius: 50%;
+    margin: 10px 20px 0 0;
+}
+
+.navtext {
+    color: #444;
+    text-decoration: none;
+    top: -12px;
+    position: relative;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.navtext:hover {
+    font-size: 14px;
+}
+
+.apps {
+    position: relative;
+    margin: 10px;
+    top: -6px;
+    color: #555;
+    cursor: pointer;
+}
+
+@media screen and (max-width:300px) {
+    .google {
+        width: 190px;
+    }
+
+    .searchb {
+        width: 90%;
+    }
+}
