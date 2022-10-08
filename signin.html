@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googlesignin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=material Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:wght@300&display=swap">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+
+    .main{
+        display: flex;
+    }
+
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #9c9c9c;
+        border-radius: 10px;
+        /* width: 750px; */
+        width: 50%;
+        padding: 25px;
+        background: #fff;
+    }
+
+    .logo {
+        width: 100px;
+        padding: 5px 0;
+        margin: 0 0 0 -15px;
+    }
+
+    .head {
+        padding-left: 10px;
+    }
+
+    .head img {
+        width: 15%;
+    }
+
+    .head h3 {
+        margin: 0;
+        font-size: 23px;
+        font-family: jost;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+    input {
+        outline: none;
+        border: 1px solid #9c9c9c;
+        border-radius: 5px;
+        padding: 0 10px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    input:focus {
+        border: 1.5px solid #1f52f9;
+    }
+
+    .name {
+        display: inline-block;
+    }
+
+    input[type="name"] {
+        display: block;
+        margin: 30px 0 0 10px;
+    }
+
+    input[type="username"] {
+        display: block;
+        /* width: 390px; */
+        width: 51%;
+        margin: 10px 0 0 10px;
+    }
+
+    .gmail {
+        position: relative;
+        display: block;
+        top: -47px;
+        left: 40%;
+        font-family: roboto;
+        color: #333;
+        font-size: 15px;
+        cursor: default;
+    }
+
+    .pass {
+        display: inline-block;
+    }
+
+    .pasword {
+        display: block;
+        width: 140px;
+        margin: 0 5px 0 10px;
+    }
+
+    label {
+        position: relative;
+        font-family: roboto;
+        color: #555;
+        font-size: 15px;
+        pointer-events: none;
+        left: 20px;
+        top: -28px;
+        transition: .2s all;
+    }
+
+    .user-name span{
+        display: flex;
+    }
+
+    input:focus~label,
+    input:valid~label {
+        top: -49px;
+        left: 15px;
+        background: #fff;
+        padding: 0 5px;
+        font-size: 10px;
+        color: #1f52f9;
+    }
+
+    a {
+        position: relative;
+        font-family: roboto;
+        text-decoration: none;
+        display: block;
+    }
+
+    .line1 {
+        font-size: 12px;
+        margin: -30px 0 0 15px;
+    }
+
+    .line2 {
+        color: #1144ed;
+        font-size: 15px;
+        margin: 20px 0 20px 15px;
+    }
+
+    .line3 {
+        font-size: 12px;
+        margin: -10px 0 0 15px;
+        /* width: 310px; */
+        width: 45%;
+    }
+
+    .line4 {
+        font-size: 15px;
+        margin: 20px 8px;
+        color: #4971f6;
+        display: inline-block;
+        font-family: arial rounded mt;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input a {
+        background: #4971f6;
+        color: #fff;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin: 40px 0 3px 80px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    /* input[type="reset"]{
+        background: #4971f6;
+        padding: 10px 30px;
+        color: #fff;
+    } */
+
+
+    .input a:hover {
+        background: #254fdb;
+    }
+
+    .iconeye {
+        display: inline-block;
+    }
+
+    #eye {
+        display: block;
+        position: relative;
+        top: -18px;
+        width: 27px;
+        cursor: pointer;
+    }
+
+    .side-image {
+        display: inline-block;
+        position: relative;
+        top: 50px;
+        left: 45%;
+        transform: translate(50%, 50%);
+    }
+
+    .side-logo {
+        /* width: 230px; */
+        width: 67%;
+    }
+    @media  screen and (max-width:970px) {
+        .user-name span{
+            display: none;
+        }
+        .line1{
+            margin: 0 0 0 15px;
+        }
+    } 
+</style>
+
+<body>
+    <div class="main">
+        <form action="">
+            <div class="head">
+                <img src="google.png" alt="">
+                <h3>Create your Google Account</h3>
+            </div>
+            <div class="name">
+                <input type="name" required>
+                <label for="">First name</label>
+            </div>
+            <div class="name">
+                <input type="name" required>
+                <label for="">Last name</label>
+            </div>
+            <div class="user-name">
+                <input type="username" required>
+                <label for="">Username</label>
+                <span class="gmail">@gmail.com</span>
+            </div>
+            <a href="" class="line1">You can use letters, numbers & periods</a>
+            <a href="" class="line2">Use my current email address instead</a>
+            <div class="pass">
+                <input type="password" class="pasword" id="pass1" required>
+                <label for="">Password</label>
+            </div>
+            <div class="pass">
+                <input type="password" class="pasword" id="pass2" required>
+                <label class="confirm">Confirm</label>
+            </div>
+            <div class="iconeye">
+                <img src="eyehide.png" onclick="show();" id="eye" alt="">
+            </div>
+            <a href="" class="line3">Use 8 or more characters with a mix of letters, numbers & symbols</a>
+            <!-- <input type="reset" value="Reset"> -->
+            <div class="input">
+                <a href="signin.html">Reset</a>
+                <!-- <input type="submit" href="google.html" value="Next" onclick="matchPassword()"> -->
+                <!-- <a href="google.html"><input type="submit" href="google.html" value="Next" onclick="matchPassword()"></a> -->
+                <a href="" onclick="matchPassword()">Next</a>
+            </div>
+        </form>
+        <div class="side-image"> 
+            <img src="sideimage.png" alt="" class="side-logo">
+        </div> 
+    </div>
+    <script type="text/javascript">
+        function show() {
+            var password = document.getElementById('pass1');
+            confirm = document.getElementById('pass2');
+            image = document.getElementById('eye');
+
+            if (password.type === "password", confirm.type === "password") {
+                password.type = "text";
+                confirm.type = "text";
+                image.setAttribute('src', 'eyeshow.png');
+
+            } else if (password.type === "text", confirm.type === "text") {
+                password.type = "password";
+                confirm.type = "password";
+                image.setAttribute('src', 'eyehide.png');
+            }
+        }
+        function matchPassword() {
+            var password = document.getElementById('pass1');
+            var confirm = document.getElementById('pass2');
+            if (password.value != confirm.value) {
+                alert("Passwords did not match");
+            }
+            else {
+                window.open('google.html');
+            }
+        }
+    </script>
+</body>
+
+</html>
